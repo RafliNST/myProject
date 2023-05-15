@@ -8,11 +8,11 @@ int main(int argc, char const *argv[])
 {
     char nama[75];
     do{
-        cout << "Masukkan Kalimat Untuk Ditranslasi: ";
+        cout << "\tMasukkan Kalimat Untuk Ditranslasi: ";
         cin.getline(nama, 75);
 
         for(int i = 0, length = strlen(nama); i < length; i++){
-            char binary[] = "00000000";
+            char binary[] = "\t00000000";
             int binary_len = strlen(binary)-1;
             int bin = (int)nama[i];
 
@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
             }
             
             cout << setiosflags(ios::left) << setw(5);
-            cout << ends << nama[i] <<" : "<< setw(5) << setiosflags(ios::left);
+            cout << "\t" << nama[i] <<" : "<< setw(5) << setiosflags(ios::left);
             cout << (int)nama[i] << " -> " << setw(2) << binary << endl;
         }
     } while(strcmp( nama, "") != 0);
